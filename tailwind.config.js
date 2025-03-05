@@ -1,7 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-export const darkMode = "class";
-export const content = ["./src/**/*.{js,ts,jsx,tsx}"];
-export const theme = {
-  extend: {},
+module.exports = {
+  darkMode: "class", // Modo oscuro basado en clases
+  content: ["./src/**/*.{js,ts,jsx,tsx}"], // Archivos donde se usará Tailwind
+  theme: {
+    extend: {}, // Extiende el tema de Tailwind si es necesario
+  },
+  plugins: [], // Plugins adicionales de Tailwind
 };
-export const plugins = [];
