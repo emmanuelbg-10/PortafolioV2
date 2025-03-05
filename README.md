@@ -1,6 +1,6 @@
-# PortfolioV1
+# PortafolioV2
 
-¡Bienvenido a mi portfolio!
+¡Bienvenido a mi portafolio!
 
 Este repositorio es un reflejo de mi viaje en el desarrollo de software. Aquí encontrarás una colección de mis proyectos, experimentos y aprendizajes. Cada línea de código representa un paso más en mi camino para convertirme en un mejor desarrollador.
 
