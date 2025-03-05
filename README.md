@@ -26,4 +26,4 @@ Este repositorio es un reflejo de mi viaje en el desarrollo de software. Aquí e
 - [LinkedIn](https://www.linkedin.com/in/emmanuel-barral-giraldo-9817b8310/)
 
 ### **¡Siempre mejorando!**
-Este portfolio está en constante evolución, igual que yo. Si tienes alguna sugerencia, comentario o simplemente quieres charlar sobre código, ¡no dudes en contactarme!
+Este portafolio está en constante evolución, igual que yo. Si tienes alguna sugerencia, comentario o simplemente quieres charlar sobre código, ¡no dudes en contactarme!
