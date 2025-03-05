@@ -7,17 +7,31 @@ export default function ThemeToggle() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Verificar el estado del tema cuando el componente se monte
-    setIsDarkMode(document.documentElement.classList.contains("dark"));
+    // Verificar el estado del tema desde las cookies
+    const savedTheme = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*=\s*([^;]*).*$)|^.*$/, "$1");
+
+    // Establecer el estado basado en la cookie, si no hay, asumir el valor del sistema
+    const isDark =
+      savedTheme === "dark" ||
+      (savedTheme === "" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+    setIsDarkMode(isDark);
+
+    // Aplicar el tema al cargar la página
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   }, []);
 
   const toggleTheme = () => {
     const newTheme = isDarkMode ? "light" : "dark";
 
-    // Aplicar el tema en el <html>
+    // Cambiar el tema en el <html>
     document.documentElement.classList.toggle("dark", newTheme === "dark");
 
-    // Guardar en cookies para que el servidor lo recuerde
+    // Guardar en cookies para recordar el tema entre sesiones
     document.cookie = `theme=${newTheme}; path=/; max-age=31536000`; // 1 año
 
     setIsDarkMode(newTheme === "dark");

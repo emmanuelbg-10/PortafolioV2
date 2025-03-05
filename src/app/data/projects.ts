@@ -29,7 +29,7 @@ const featuredProjects = [
     description: "Descripción breve del Proyecto Cuatro.",
     repoUrl: "https://github.com/emmanuelbg-10/EstudioTema4Emmanuel",
     liveUrl: "https://emmanuelbg10.vercel.app",
-    imageUrl: `/img/1.png`,
+    imageUrl: `/img/2.png`,
   },
   // Agrega los demás proyectos aquí
 ];

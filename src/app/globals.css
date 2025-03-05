@@ -32,6 +32,12 @@ main {
   --text-color: #2d3748;
   --shadow: rgba(0, 0, 0, 0.1);
   --hover-color: #4a5568;
+  --background-div: #f5f7fa;
+  --background-card: #fff;
+
+  /* Mejorando el fondo de la tarjeta */
+  --background-card-gradient: linear-gradient(145deg, #ffffff, #f1f1f1);
+  --card-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px;
 }
 
 /* Tema oscuro */
@@ -40,4 +46,22 @@ main {
   --text-color: #e6f1ff;
   --shadow: rgba(255, 255, 255, 0.1);
   --hover-color: #64ffda;
+  --background-div: #0a1620;
+  --background-card: #0d1b2a;
+
+  /* Mejorando el fondo de la tarjeta en el tema oscuro */
+  --background-card-gradient: linear-gradient(145deg, #1c2a3b, #0d1b2a);
+  --card-shadow: rgba(255, 255, 255, 0.15) 0px 4px 8px;
+}
+
+/* Aplicando las mejoras en el background-card */
+.card {
+  background: var(--background-card-gradient);
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease; /* Transición suave para cuando se cambia el tema */
+}
+
+/* Agregando un efecto de hover para más interacción */
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px;
 }
