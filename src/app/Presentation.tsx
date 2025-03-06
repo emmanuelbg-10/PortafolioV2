@@ -8,7 +8,7 @@ export default function Presentation() {
     >
       <div className="w-full lg:w-1/2 flex flex-col justify-center">
         <header>
-          <h1 className="text-3xl font-bold mb-4">Hola, soy Emmanuel</h1>
+          <h1 className="text-3xl font-bold mb-4 text-left">Hola, soy Emmanuel</h1>
         </header>
 
         <div className="text-lg space-y-4">
@@ -20,10 +20,10 @@ export default function Presentation() {
           </p>
           <p>
             Con 20 años, resido en Tenerife, España, y estoy a punto de graduarme en Desarrollo de
-            Aplicaciones Multiplataforma. Mi formación académica y la experiencia en proyectos
-            reales me permiten abordar desafíos complejos y trabajar de manera colaborativa en
-            entornos ágiles. Busco constantemente nuevos retos que me ayuden a crecer
-            profesionalmente y a aportar valor en cada iniciativa.
+            Aplicaciones Web. Mi formación académica y la experiencia en proyectos me permiten
+            abordar desafíos complejos y trabajar de manera colaborativa en entornos ágiles. Busco
+            constantemente nuevos retos que me ayuden a crecer profesionalmente y a aportar valor en
+            cada iniciativa.
           </p>
         </div>
       </div>

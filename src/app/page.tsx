@@ -17,7 +17,7 @@ export default function Home() {
         </article>
       </main>
       <footer className="text-center py-4">
-        <p>© {new Date().getFullYear()} Portafolio Emmanuel. Todos los derechos reservados</p>
+        © {new Date().getFullYear()} Portafolio Emmanuel. Todos los derechos reservados
         <div className="m-2">
           <a
             href="https://github.com/emmanuelbg-10"
