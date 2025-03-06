@@ -18,38 +18,32 @@ export default function Projects() {
             key={proj.id}
             className="no-underline text-primary-color"
             href={proj.liveUrl}
-            aria-label={`Ver proyecto: ${proj.title}`} // Mejora de accesibilidad
+            aria-label={`Ver proyecto: ${proj.title}`}
           >
-            <h3 className="text-lg font-semibold text-center mb-2">{proj.title}</h3>{" "}
-            {/* Título más claro */}
-            <div className="relative w-full max-w-[600px] aspect-[6/4] [perspective:1200px] cursor-pointer mx-auto overflow-hidden rounded-lg">
+            <div className="mb-4">
+              <h3 className="text-lg font-semibold text-center mb-2">{proj.title}</h3>
               <motion.div
-                className="relative w-full h-full transition-transform [transform-style:preserve-3d]"
-                whileHover={{ rotateY: 180 }}
+                className="relative w-full max-w-[600px] aspect-[6/3] cursor-pointer mx-auto overflow-hidden shadow-lg"
+                whileHover={{ scale: 1.05 }}
+                style={{ border: "4px solid var(--background-div)" }} // Añadir bordes del mismo color que el fondo
               >
                 {/* Front Side */}
-                <div
-                  className="card absolute w-full h-full shadow-lg rounded-lg flex flex-col items-center justify-center p-6 [backface-visibility:hidden]"
-                  style={{ backgroundColor: "var(--background-div)", color: "var(--text-color)" }}
-                >
-                  <div className="relative w-full h-full overflow-hidden rounded-lg">
-                    {/* Imagen de fondo que no se ve afectada por el padding */}
+                <div className="relative w-full h-full overflow-hidden">
+                  <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden">
                     <Image
                       src={proj.imageUrl}
                       alt={`Captura de pantalla de ${proj.title}`}
-                      layout="fill" // Esto asegura que la imagen ocupe todo el espacio disponible
-                      objectFit="cover" // Esto asegura que la imagen cubra todo el espacio sin distorsionarse
-                      className="rounded-lg"
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-opacity duration-300 opacity-100 hover:opacity-0"
                     />
                   </div>
-                </div>
-
-                {/* Back Side */}
-                <div
-                  className="absolute w-full h-full shadow-lg rounded-lg flex items-center justify-center p-4 text-center bg-amber-500 dark:bg-gray-700 [transform:rotateY(180deg)] [backface-visibility:hidden]"
-                  style={{ backgroundColor: "var(--background-div)", color: "var(--text-color)" }}
-                >
-                  <p>{proj.description}</p>
+                  <div
+                    className="absolute top-0 left-0 right-0 bottom-0 bg-opacity-50 flex flex-col justify-center items-center p-4 opacity-0 hover:opacity-100 transition-opacity duration-300"
+                    style={{ background: "var(--background-div)" }}
+                  >
+                    <p className="text-sm">{proj.description}</p>
+                  </div>
                 </div>
               </motion.div>
             </div>
