@@ -5,7 +5,7 @@ const featuredProjects = [
     description: "Descripción breve del Proyecto Uno.",
     repoUrl: "https://github.com/emmanuelbg-10/EstudioTema4Emmanuel",
     liveUrl: "https://emmanuelbg10.vercel.app",
-    imageUrl: `/img/1.png`,
+    imageUrl: `/img/Metereologia.png`,
   },
   {
     id: 2,
