@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   const [projects] = useState(featuredProjects);
+  const [loading, setLoading] = useState(true);
 
   return (
     <section className="projects px-6 py-10" id="projects">
@@ -25,25 +26,22 @@ export default function Projects() {
               <motion.div
                 className="relative w-full max-w-[600px] aspect-[6/3] cursor-pointer mx-auto overflow-hidden shadow-lg"
                 whileHover={{ scale: 1.05 }}
-                style={{ border: "4px solid var(--background-div)" }} // Añadir bordes del mismo color que el fondo
+                style={{
+                  border: "4px solid var(--background-div)",
+                  backgroundColor: "var(--background-div)",
+                }} // Añadir bordes del mismo color que el fondo
               >
                 {/* Front Side */}
-                <div className="relative w-full h-full overflow-hidden">
-                  <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden">
-                    <Image
-                      src={proj.imageUrl}
-                      alt={`Captura de pantalla de ${proj.title}`}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-opacity duration-300 opacity-100 hover:opacity-0"
-                    />
-                  </div>
-                  <div
-                    className="absolute top-0 left-0 right-0 bottom-0 bg-opacity-50 flex flex-col justify-center items-center p-4 opacity-0 hover:opacity-100 transition-opacity duration-300"
-                    style={{ background: "var(--background-div)" }}
-                  >
-                    <p className="text-sm">{proj.description}</p>
-                  </div>
+                <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden flex items-center justify-center">
+                  <Image
+                    src={proj.imageUrl}
+                    alt={`Captura de pantalla de ${proj.title}`}
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-opacity duration-300 opacity-100 hover:opacity-0"
+                    onLoadingComplete={() => setLoading(false)}
+                  />
+                  {!loading && <p className="text-sm text-center">{proj.description}</p>}
                 </div>
               </motion.div>
             </div>
