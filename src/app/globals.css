@@ -31,7 +31,7 @@ main {
   --background-color: linear-gradient(120deg, #f5f7fa 0%, #dfe4ea 100%);
   --text-color: #2d3748;
   --shadow: rgba(0, 0, 0, 0.1);
-  --hover-color: #4a5568;
+  --hover-color: #555555; /* Un gris oscuro que resalta sobre el fondo blanco sin llamar demasiado la atención */
   --background-div: #f5f7fa;
   --background-card: #fff;
 
@@ -45,7 +45,7 @@ main {
   --background-color: #0d1b2a;
   --text-color: #e6f1ff;
   --shadow: rgba(255, 255, 255, 0.1);
-  --hover-color: #64ffda;
+  --hover-color: #86ffda;
   --background-div: #0a1620;
   --background-card: #0d1b2a;
 
