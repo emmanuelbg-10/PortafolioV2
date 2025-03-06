@@ -28,7 +28,8 @@ export default function ThemeToggle() {
   const toggleTheme = () => {
     const newTheme = isDarkMode ? "light" : "dark";
 
-    // Cambiar el tema en el <html>
+    // Cambiar el tema en el <html> con transición
+    document.documentElement.classList.add("transition-colors", "duration-500");
     document.documentElement.classList.toggle("dark", newTheme === "dark");
 
     // Guardar en cookies para recordar el tema entre sesiones

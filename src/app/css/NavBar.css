@@ -38,11 +38,19 @@
 .menu li a {
   font-weight: bold;
   color: var(--text-color);
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu li a:hover {
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra difusa más suave alrededor del texto */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.dark .menu li a:hover {
   color: var(--hover-color);
+  text-shadow: 0 0 20px rgba(0, 0, 255, 1); /* Sombra difusa azul en modo oscuro */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
 }
 
 /* Ocultar el icono de hamburguesa en pantallas grandes */
