@@ -4,6 +4,7 @@ import featuredProjects from "./data/projects";
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import "./css/Projects.css"; // Importamos los estilos externos
 
 export default function Projects() {
   const [projects] = useState(featuredProjects);
@@ -12,7 +13,6 @@ export default function Projects() {
   return (
     <section className="projects px-6 py-10" id="projects">
       <h2 className="text-2xl font-semibold text-center mb-6">Mis Proyectos</h2>
-      <hr className="my-2 border-gray-300 dark:border-gray-600" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-auto">
         {projects.map((proj) => (
           <a

@@ -104,7 +104,7 @@ const InteractiveBackground: React.FC = () => {
         <ambientLight intensity={0.5} />
         <InteractiveStars />
         <DigitalParticles />
-        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
+        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.1} />
       </Canvas>
     </div>
   );

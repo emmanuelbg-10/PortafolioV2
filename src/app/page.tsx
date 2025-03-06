@@ -12,6 +12,7 @@ export default function Home() {
       <main className="content ">
         <article>
           <Presentation />
+          <div className="oblique-border"></div>
           <Projects />
         </article>
       </main>

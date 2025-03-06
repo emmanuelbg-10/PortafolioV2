@@ -3,13 +3,13 @@
   text-align: center;
 }
 
-.projects hr {
+/* .projects hr {
   width: 50px;
   height: 4px;
   background: #0070f3;
   border: none;
   margin: 10px auto;
-}
+} */
 
 .card {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

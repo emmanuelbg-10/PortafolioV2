@@ -6,6 +6,7 @@ import "./css/NavBar.css"; // Importamos los estilos externos
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   // Manejar la clase en <body> cuando se abre el menú
   useEffect(() => {
@@ -15,6 +16,28 @@ export default function NavBar() {
       document.body.classList.remove("menu-open");
     }
   }, [menuOpen]);
+
+  // Manejar el cambio de sección activa
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 60) {
+          currentSection = section.getAttribute("id") || "";
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <nav className="navbar">
@@ -28,13 +51,19 @@ export default function NavBar() {
       {/* Menú */}
       <ul className="menu">
         <li>
-          <a href="#conocimientos">Conocimientos</a>
+          <a href="#conocimientos" className={activeSection === "conocimientos" ? "active" : ""}>
+            Conocimientos
+          </a>
         </li>
         <li>
-          <a href="#projects">Proyectos</a>
+          <a href="#projects" className={activeSection === "projects" ? "active" : ""}>
+            Proyectos
+          </a>
         </li>
         <li>
-          <a href="#contact">Contacto</a>
+          <a href="#contact" className={activeSection === "contact" ? "active" : ""}>
+            Contacto
+          </a>
         </li>
       </ul>
 
