@@ -50,7 +50,7 @@ const DigitalParticles: React.FC = () => {
         <Text
           key={particle.id}
           position={particle.position}
-          fontSize={0.5}
+          fontSize={0.25}
           color={particleColor}
           anchorX="center"
           anchorY="middle"

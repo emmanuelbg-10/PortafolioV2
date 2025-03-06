@@ -18,6 +18,7 @@ export default function Projects() {
           <a
             key={proj.id}
             className="no-underline text-primary-color"
+            target="_blank"
             href={proj.liveUrl}
             aria-label={`Ver proyecto: ${proj.title}`}
           >
