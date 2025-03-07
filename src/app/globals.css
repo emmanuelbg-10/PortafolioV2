@@ -30,9 +30,13 @@ nav {
   padding: 20px;
 }
 
-p {
+.me {
   text-align: left;
   padding: 1rem 0;
+}
+
+.margin {
+  margin: 2rem 0;
 }
 
 h1 {

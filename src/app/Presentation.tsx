@@ -2,16 +2,13 @@ import Image from "next/image";
 
 export default function Presentation() {
   return (
-    <section
-      id="conocimientos"
-      className="relative flex flex-col lg:flex-row items-stretch justify-between w-full py-8 px-4 lg:px-16"
-    >
+    <section className="relative flex flex-col lg:flex-row items-stretch justify-between w-full py-8 px-4 lg:px-16">
       <div className="w-full lg:w-1/2 flex flex-col justify-center">
         <header>
           <h1 className="text-3xl font-bold mb-4 text-left">Hola, soy Emmanuel</h1>
         </header>
 
-        <div className="text-lg space-y-4">
+        <div className="me text-lg space-y-4">
           <p>
             Soy un desarrollador web full stack con experiencia en tecnologías modernas para el
             frontend y el backend. Mi pasión por el aprendizaje continuo me impulsa a explorar

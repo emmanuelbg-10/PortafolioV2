@@ -4,7 +4,6 @@ import featuredProjects from "./data/projects";
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import "./css/Projects.css"; // Importamos los estilos externos
 
 export default function Projects() {
   const [projects] = useState(featuredProjects);
@@ -33,7 +32,7 @@ export default function Projects() {
                 }} // Añadir bordes del mismo color que el fondo
               >
                 {/* Front Side */}
-                <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden flex items-center justify-center">
+                <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden flex items-center justify-center p-4">
                   <Image
                     src={proj.imageUrl}
                     alt={`Captura de pantalla de ${proj.title}`}
@@ -42,7 +41,7 @@ export default function Projects() {
                     className="transition-opacity duration-300 opacity-100 hover:opacity-0"
                     onLoadingComplete={() => setLoading(false)}
                   />
-                  {!loading && <p className="text-sm text-center">{proj.description}</p>}
+                  {!loading && <p className="text-sm text-center mt-2">{proj.description}</p>}
                 </div>
               </motion.div>
             </div>
