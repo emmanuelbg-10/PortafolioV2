@@ -27,7 +27,7 @@ export default function Presentation() {
 
       <figure className="w-full lg:w-1/2 flex items-center justify-center mt-8 lg:mt-0">
         <Image
-          src="/img/AnimatedEmmanuel.png" // Reemplaza con la ruta real de tu imagen
+          src="/img/Emmanuel.png" // Reemplaza con la ruta real de tu imagen
           alt="Foto de Emmanuel"
           width={250}
           height={250}
